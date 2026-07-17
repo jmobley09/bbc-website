@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiteNav } from "@/components/SiteNav";
 import "./globals.css";
-
-const navItems = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/calendar", label: "Calendar" },
-  { href: "/contact", label: "Contact" },
-];
 
 export const metadata: Metadata = {
   title: {
@@ -41,35 +34,25 @@ export default function RootLayout({
             <span>
               <strong className="block">Bible Baptist Church</strong>
               <small className="block text-[0.82rem] text-[#5c6670] max-[560px]:hidden">
-                Faithful. Welcoming. Serving.
+                Faith. Prayer. Service.
               </small>
             </span>
           </Link>
-          <nav
-            className="flex flex-wrap justify-end gap-1.5 max-[860px]:justify-start"
-            aria-label="Main navigation"
-          >
-            {navItems.map((item) => (
-              <Link
-                className="rounded-md px-3 py-[9px] font-bold text-[#5c6670] hover:bg-[#e5eef1] hover:text-[#163944] max-[560px]:px-[9px] max-[560px]:py-2 max-[560px]:text-[0.92rem]"
-                key={item.href}
-                href={item.href}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+          <SiteNav />
         </header>
         <main>{children}</main>
         <footer className="flex justify-between gap-6 bg-[#11181c] px-[clamp(18px,5vw,72px)] py-[34px] text-white max-[860px]:grid">
           <div>
             <strong>Bible Baptist Church</strong>
             <p className="mt-1.5 text-white/70">
-              Gathering weekly for worship, Scripture, prayer, and fellowship.
+              Gathering weekly for worship, Scripture, prayer, and fellowship. Extracurricular
             </p>
           </div>
           <div className="flex flex-wrap gap-3.5 text-white/80">
             <Link href="/services">Service Times</Link>
+            <Link href="/adults">Adult Classes</Link>
+            <Link href="/children">Children&apos;s Classes</Link>
+            <Link href="/teens">Teen Ministry</Link>
             <Link href="/calendar">Upcoming Events</Link>
             <Link href="/contact">Get in Touch</Link>
           </div>

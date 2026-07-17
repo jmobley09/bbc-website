@@ -21,6 +21,9 @@ export const primaryButton =
 export const secondaryButton =
   "inline-flex min-h-12 cursor-pointer items-center justify-center rounded-md border border-white/70 px-[18px] py-3 font-extrabold text-white";
 
+export const textButton =
+  "mt-7 inline-flex items-center rounded-md border border-[#24515f] px-[18px] py-3 font-extrabold text-[#24515f] transition hover:bg-[#24515f] hover:text-white";
+
 export const pageHero =
   "bg-[#e5eef1] px-[clamp(18px,5vw,72px)] py-[clamp(56px,8vw,106px)]";
 
